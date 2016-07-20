@@ -8,12 +8,14 @@ config :rumbl, Rumbl.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
+config :comeonin, :bcrypt_log_rounds, 4
+config :comeonin, :pbkdf2_rounds, 1
 
 # Configure your database
 config :rumbl, Rumbl.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "aico",
+  password: "",
   database: "rumbl_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

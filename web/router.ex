@@ -23,6 +23,7 @@ defmodule Rumbl.Router do
 
     resources "/users", UserController #, only: [:index, :show, :new, :create, :edit, :update]
     resources "/sessions", SessionController, only: [:new, :create, :delete]
+    get "/watch/:id", WatchController, :show
   end
 
   scope "/manage", Rumbl do
